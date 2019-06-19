@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tooltip</title>
+	<meta lang="en-US">
+	<meta charset="utf-8">
+	<meta name="viewport" name="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container pt-5">
+	    <button title="welcome user" data-toggle="tooltip" id="test" data-placement="right" data-trigger="click" data-delay="1000">welcome to tooltip</button>
+    </div>
+    <script>
+    	$(document).ready(function(){
+    		$("#test").tooltip();
+    	});
+    </script>
+</body>
+</html>
