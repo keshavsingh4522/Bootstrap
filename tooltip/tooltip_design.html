@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tooltip</title>
+	<meta lang="en-US">
+	<meta charset="utf-8">
+	<meta name="viewport" name="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<style type="text/css">
+    	.tooltip-inner{
+    		background-color: red;
+    	}
+    	.arrow
+    	{
+    		display:none !important;
+    	}
+    </style>
+</head>
+<body>
+	<div class="container pt-5">
+	    <button id="test">welcome to tooltip</button>
+    </div>
+
+    <script>
+    	$(document).ready(function(){
+    		$("#test").tooltip({
+    			title:'welcome user',
+    			// placement:'left',
+    		    trigger:'click',
+    			delay:1000,
+    		});
+    		$("#test").click(function(){
+    			var i=document.createElement('I');
+    			 i.className="fa fa-caret-down";
+    			 i.style.color='red';
+    			 i.style.position='absolute';
+    			 i.style.bottom=-2.5+'px';
+    			 i.style.left='50%'
+    			 $(".tooltip-inner").append(i);
+    		});
+    	});
+    </script>
+</body>
+</html>
