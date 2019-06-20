@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>filter</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container pt-5">
+		<form>
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<button class="btn btn-info" id="undo">Undo</button>
+			</div>
+			<input type="search" name="search" id="search" class="form-control border-left-0 border-right-0" />
+			<div class="input-group-append">
+			       <button class="btn btn-primary border" id="search-item">Search</button>
+		    </div>
+		</div>
+	    </form>
+		<ul class="list-group">
+			<li class="list-group-item">Keshav Singh<i class="fa fa-close float-right text-danger close"></i></li>
+			<li class="list-group-item">Priya Jain<i class="fa fa-close float-right text-danger close"></i></li>
+			<li class="list-group-item">Dev Singh<i class="fa fa-close float-right text-danger close"></i></li>
+			<li class="list-group-item">Pari Jain<i class="fa fa-close float-right text-danger close"></i></li>
+			<li class="list-group-item">keshu<i class="fa fa-close float-right text-danger close"></i></li>
+			<li class="list-group-item">Kunal Sharma<i class="fa fa-close float-right text-danger close"></i></li>
+			<li class="list-group-item">Manish Raj<i class="fa fa-close float-right text-danger close"></i></li>
+			<li class="list-group-item">Kishore Singh<i class="fa fa-close float-right text-danger close"></i></li>
+		</ul>
+		<p id="result"></p>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$('#search-item').click(function(){
+				var data=$('#search').val();
+				$('li').each(function(){
+					// document.getElementById('result').innerHTML+=data+'<br>';  correct
+					// $('p').append(data+'<br>');  correct
+					if($(this).html().toLowerCase().indexOf(data.toLowerCase())!=-1)
+					{
+						$(this).show();
+					}
+					else
+					{
+						$(this).hide();
+					}
+				});
+				$('#undo').click(function(){
+					document.exexCommand('undo');
+				});
+				return false;
+			});
+			$('.close').each(function(){
+					$(this).click(function(){
+					/*	this.parentElement.remove();//selecting this of javascript not jquery because we are using javascript property parentElement *///it is javascript method
+					$(this).parent().remove();//it is jquery method
+					});
+				});
+		});
+	</script>
+</body>
+</html>
