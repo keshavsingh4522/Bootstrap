@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>popover design</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h3>Popover Example</h3>
+  <a href="#">Toggle popover</a>
+</div>
+<style type="text/css">
+  .popover-header{
+    background-color: red;
+    color: white; 
+  }
+  .popover-body{
+    background-color: blue;
+    color: white;
+  }
+</style>
+<script>
+$(document).ready(function(){
+    $('a').popover({
+      title:'Popover Header',
+      content:'Some content inside the popover',
+      // trigger:'focus', //hover,click   bydefault its: trigger:'click'
+    });
+});
+</script>
+
+</body>
+</html>
