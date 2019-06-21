@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>flex</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.main
+		{
+			display: flex;
+			background-color: black;
+			justify-content:space-between;
+      /*
+      center         -> it arrange in center
+      space-around   -> left and right corner used for space and it devides space equally
+      space-between  -> left and right corner not used for space and divide space equally
+      flex-end       -> arrange in right corner
+      flex-start     -> arrange in left corner
+      */
+		}
+		.logo-box
+		{
+			width: 100px;
+			height: 100px;
+			background-color: navy;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+<div class="main">
+	<div class="logo-box">
+	</div>
+	<div class="logo-box">
+	</div>
+	<div class="logo-box">
+	</div>
+	<div class="logo-box">
+	</div>
+</div>
+</body>
+</html>
