@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>carousel</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/animate.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+	<div class="carousel" data-ride='carousel' id="slider"><!--  data-interval='2000'  -->
+		<div class="carousel-inner bg-danger">
+			<!-- start  prev and next -->
+
+			<a href="#slider" class="carousel-control-prev" role='button' data-slide='prev'>
+				<!-- <span class="carousel-control-prev-icon" area-hidden='true'></span> -->
+				<i class="fa fa-arrow-left" style="font-size: 35px;"></i>
+			</a>
+			<a href="#slider" class="carousel-control-next" role='button' data-slide='next'>
+				<!-- <span class="carousel-control-next-icon" area-hidden='true'></span> -->
+				<i class="fa fa-arrow-right" style="font-size: 35px;"></i>
+			</a>
+
+			<!-- end prev and next -->
+			<!-- start carousel indicator coading -->
+			<ol class="carousel-indicators">
+				<!-- <li data-target='#slider' data-slide-to='0'></li>
+				<li data-target='#slider' data-slide-to='1'></li>
+				<li data-target='#slider' data-slide-to='2'></li>
+				<li data-target='#slider' data-slide-to='3'></li>
+				<li data-target='#slider' data-slide-to='4'></li> -->
+				<li id="one"></li>
+				<li id="two"></li>
+				<li id="three"></li>
+				<li id="four"></li>
+				<li id="five"></li>
+			</ol>
+			<!-- end carousel indicators coading -->
+			<div class="carousel-item active animated zoomIn" >
+				<div class="mx-auto w-75">
+			      <img src="../images/c.jpeg"  width="100%" />
+			    </div>
+			   <div class="carousel-caption">
+			   	   <h1>Welcome to 1st image</h1>
+			   	   <p>it is the natural image,which show the love towards you</p>
+			   </div>
+	        </div>
+
+		    <div class="carousel-item animated zoomIn">
+		    	<div class="mx-auto w-75">
+			       <img src="../images/c.jpeg" width="100%"  />
+			    </div>
+			    <div class="carousel-caption">
+			   	   <h1>Welcome to 1st image</h1>
+			   	   <p>it is the natural image,which show the love towards you</p>
+			   </div>
+		    </div>
+
+		    <div  class="carousel-item animated zoomIn">
+		    	<div class="mx-auto w-75">
+			       <img src="../images/c.jpeg" width="100%"  />
+			    </div>
+			    <div class="carousel-caption">
+			   	   <h1>Welcome to 1st image</h1>
+			   	   <p>it is the natural image,which show the love towards you</p>
+			   </div>
+		    </div>
+
+		    <div class="carousel-item animated zoomIn">
+		    	<div class="mx-auto w-75">
+			       <img src="../images/c.jpeg" width="100%" />
+		     	</div>
+			    <div class="carousel-caption">
+			   	   <h1>Welcome to 1st image</h1>
+			   	   <p>it is the natural image,which show the love towards you</p>
+			   </div>
+		    </div>
+		    <div class="carousel-item animated zoomIn">
+		    	<div class="mx-auto w-75">
+			        <img src="../images/c.jpeg" width="100%" />
+			    </div>
+			    <div class="carousel-caption">
+			   	   <h1>Welcome to 1st image</h1>
+			   	   <p>it is the natural image,which show the love towards you</p>
+			   </div>
+		    </div>
+	</div>
+    </div>
+
+<!-- start dynamic prev next -->
+<div class="btn-group fixed-top" style="width: 70px;">
+    <button class="btn bg-danger " id="prev">PREV</button>
+    <button class="btn bg-primary" id="next">NEXT</button>
+</div>
+    <script>
+    	$(document).ready(function(){
+    		$("#prev").click(function(){
+    			$("#slider").carousel('prev');
+    		});
+    		$("#next").click(function(){
+    			$("#slider").carousel('next');
+    		});
+    		// indicators
+    		$("#one").click(function(){
+    			$("#slider").carousel(0);
+    		});
+    		$("#two").click(function(){
+    			$("#slider").carousel(1);
+    		});
+    		$("#three").click(function(){
+    			$("#slider").carousel(2);
+    		});
+    		$("#four").click(function(){
+    			$("#slider").carousel(3);
+    		});
+    		$("#five").click(function(){
+    			$("#slider").carousel(4);
+    		});
+    		//duration->data-duration
+    		$("#slider").carousel({interval:2000});
+       		// jquery touch swipe
+    		$("#slider").swipe({
+    			swipe : function(event,direction){
+    				// alert(direction);
+    				if(direction=='right')
+    				{
+    					$(this).carousel('prev');
+    				}
+    				if(direction=='left')
+    				{
+    					$(this).carousel('next');
+    				}
+    			},
+    		});
+    	});
+    </script>
+<!-- end dynamic prev and next -->
+<!-- jquery touch swipe left or right -->
+<script src="../js/jquery.touchSwipe.js"></script><!-- https://github.com/mattbryson/TouchSwipe-Jquery-Plugin -->
+</body>
+</html>
