@@ -2,5 +2,5 @@
                  2.image
                    .rounded
                    .rounded-circle
-                   .img-thimbnail
+                   .img-thumbnail
                  
