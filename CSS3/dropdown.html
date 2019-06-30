@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta lang="en-US">
+    <title>home page</title>
+    <style type="text/css">
+        *{box-sizing: border-box;}
+        body
+           {margin: 0;padding: 0;}
+        nav
+          {background-color:black;width: 100%;height: 51px;}
+        ul
+          {list-style: none;margin: 0;padding: 0;}
+        a
+          {text-decoration: none;color: white;font-size: 20px;font-weight: arial;}
+        #nav-item
+          {display: inline-block;padding:14px;}
+        #nav-item:hover
+             {background-color: red;}
+        #dropdown
+           {position: absolute;background-color: black;top: 50px;left: 0;width: 138px;height: 170px;display: none;}
+        .relative
+               {position: relative;}
+        #dropdown-item
+             {color: magenta;padding: 8px;}
+            #nav-item:hover #dropdown 
+               {display: block;transition: 0.5s;transition-timing-function: linear;}
+            #dropdown-item:hover
+                 {background-color: red;}
+        #music
+             {background-color: black;color: white;position: absolute;top:2px;left: 138px;width: 145px;height: 197px;display: none;}
+        #music-item
+                {font-size: 15px;padding: 8px;padding-left: 12px;}
+        .msk:hover #music
+               {display: block;}
+        #music-item:hover
+             {background-color: red;}
+    </style>
+</head>
+<body>
+    <nav>
+       <ul>
+           <li id="nav-item"><a href="#">Home</a></li>
+           <li id="nav-item"><a href="#">Images</a></li>
+           <li id="nav-item"><a href="#">Videos</a></li>
+           <li id="nav-item"><a href="#">Audios</a></li>
+           <li id="nav-item" class="relative"><a href="#">Downloads</a>
+               <i class="fa fa-caret-down" style="color: white;float: right;padding: 5px;"></i>
+               <ul id="dropdown">
+                   <li id="dropdown-item" class="msk">Music
+                     <ul id="music">
+                         <li id="music-item">latest song</li>
+                         <li id="music-item">devotional song</li>
+                         <li id="music-item">rock song</li>
+                         <li id="music-item">hip hop song</li>
+                         <li id="music-item">breakup song</li>
+                         <li id="music-item">classical song</li>
+                     </ul>
+                   </li>
+                   <li id="dropdown-item">movies</li>
+                   <li id="dropdown-item">videos</li>
+                   <li id="dropdown-item">audios</li>
+                   <li id="dropdown-item">ringtones</li>
+                   
+               </ul>
+           </li>
+           
+       </ul> 
+        <i class="fa fa-spinner fa-spin" style="color: red;"></i>
+        <i class="fa fa-spinner fa-pulse" style="color: red;"></i>
+    </nav>
+
+</body>
+</html>
