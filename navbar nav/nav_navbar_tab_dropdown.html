@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>nav</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <style type="text/css">
+          a.active
+          {
+            color: red;
+          }
+        </style>
+    </head>
+    <body>
+      <!-- start nav -->
+      <ul class="nav bg-secondary d-flex justify-content-around">
+         <li class="nav-content"><a href="#" class="nav-link text-light">Home</a></li>
+         <li class="nav-content"><a href="#" class="nav-link text-light">Images</a></li>
+         <li class="nav-content"><a href="#" class="nav-link text-light">Videos</a></li>
+         <li class="nav-content"><a href="#" class="nav-link text-light">Contact us</a></li>
+         <li class="nav-content">
+           <a href="#" class="nav-link text-light dropdown-toggle" data-toggle='dropdown'>About us</a>
+           <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Phone</a>
+            <a href="#" class="dropdown-item">Email</a>
+            <a href="#" class="dropdown-item">Fax</a>
+            <a href="#" class="dropdown-item">Address</a>
+            <a href="#" class="dropdown-item">Certificate</a>
+           </div>
+         </li>
+      </ul>
+      <!-- end nav -->
+      <!-- start tab -->
+      <ul class="nav nav-tabs bg-warning">
+         <li class="nav-content"><a href="#home" class="nav-link text-success active" data-toggle='tab'>Home</a></li>
+         <li class="nav-content"><a href="#images" class="nav-link text-success" data-toggle='tab'>Images</a></li>
+         <li class="nav-content"><a href="#videos" class="nav-link text-success" data-toggle='tab'>Videos</a></li>
+         <li class="nav-content"><a href="#contact-us" class="nav-link text-success" data-toggle='tab'>Contact us</a></li>
+         <li class="nav-content"><a href="#about-us" class="nav-link text-success" data-toggle='tab'>About us</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="home" class="tab-pane active">
+          <h1>welcome to home page</h1>
+        </div>
+        <div id="images" class="tab-pane">
+          <h1>welcome to images page</h1>
+        </div>
+        <div id="videos" class="tab-pane">
+          <h1>welcome to videos page</h1>
+        </div>
+        <div id="contact-us" class="tab-pane">
+          <h1>welcome to contact us page</h1>
+        </div>
+        <div id="about-us" class="tab-pane">
+          <h1>welcome to about us page</h1>
+        </div>
+      </div>
+      <!-- end-tab -->
+        <!-- start navbar -->
+       <div class="bg-primary">
+           <nav class="navbar navbar-expand-md">
+                   <a href="#" class="navbar-brand text-light">My brand</a>
+                   <i class="fa fa-bars navbar-toggler text-light" id="open-menu"></i>
+             <div class="navbar-collapse collapse" id="mobile-menu">
+               <ul class="navbar-nav ml-auto">
+                   <li class="navbar-item"><a href="#" class="nav-link text-light">Home</a></li>
+                   <li class="navbar-item"><a href="#" class="nav-link text-light">Images</a></li>
+                   <li class="navbar-item"><a href="#" class="nav-link text-light">Videos</a></li>
+                   <li class="navbar-item"><a href="#" class="nav-link text-light">Contact us</a></li>
+                   <li class="navbar-item"><a href="#" class="nav-link text-light">About us</a></li>
+               </ul>
+            </div>
+            </nav>
+       </div>
+       <!-- end navbar -->
+       <!-- start navbar dynamic coading -->
+       <script>
+           $(document).ready(function(){
+               $("#open-menu").click(function(){
+                $('#mobile-menu').collapse('toggle');
+               });
+           });
+       </script>
+       <!-- end navbar coading -->
+    </body>
+</html>
