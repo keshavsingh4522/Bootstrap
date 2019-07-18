@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>popover card</title>
+	  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<style type="text/css">
+			*:focus
+			{
+				box-shadow: none !important;
+			}
+		</style>
+</head>
+<body>
+	<div class="container pt-5">
+<div class="card text-center w-50 mx-auto shadow-lg">
+	<div class="card-header bg-danger text-light">
+		<h1>Login with us</h1>
+	</div>
+	<div class="card-body" id="parent">
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<span class="input-group-text bg-dark text-light">Username</span>
+			</div>
+			<input type="text" name="username" class="form-control" id="username" autocomplete="off" />
+		</div>
+
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<span class="input-group-text bg-dark text-light">Password</span>
+			</div>
+			<input type="password" name="password" class="form-control" id="password"/>
+		</div>
+		<button type="submit" class="btn float-right bg-primary text-light">Login</button>
+	</div>
+	<div class="card-footer bg-danger text-light">
+		<p class="m-0 p-0">Powered by keshavsingh</p>
+	</div>
+</div>
+</div>
+<script>
+	$(document).ready(function(){
+		$("#username").popover({
+			title:'HINT',
+			content:'enter email or phone number',
+			trigger:'focus',
+			// placement:'top'.
+		});
+		$("#password").popover({
+			title:'HINT',
+			content:'enter password',
+			trigger:'focus',
+			// placement:'top'.
+		});
+	});
+</script>
+</body>
+</html>
